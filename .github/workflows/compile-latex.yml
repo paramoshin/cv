@@ -3,9 +3,13 @@ on:
   push:
     branches:
       - 'main'
+    paths:
+      - '**.tex'
+
 
 jobs:
   build_latex:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
